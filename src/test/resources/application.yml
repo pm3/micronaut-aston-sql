@@ -1,0 +1,26 @@
+micronaut:
+  application:
+    name: micronautAstonSql
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+datasources:
+  default:
+    db-type: postgres
+    dialect: POSTGRES
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/aideduapi
+    username: aston
+    password: aston
+    testOnBorrow: true
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: SELECT 1
+    max-active: 15
+    max-idle: 10
+    max-wait: 8000
+
+aston.sql.transaction: "true"
